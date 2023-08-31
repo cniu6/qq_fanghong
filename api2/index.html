@@ -11,8 +11,8 @@
 	
     <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"><a id="pbase64"></a></div>
 	<small id="urlBase64"></small>
-	    <iframe id="urlBase64"
-        name="iframe"
+	    <iframe id="iframeurlBase64"
+        name="iframeurlBase64"
         height="100%"
         width="100%"
         src=""
@@ -45,6 +45,7 @@
 
 	console.log("C牛6 https://github.com/cniu6/qq_fanghong/");
 	document.getElementById("urlBase64").src=urlBase64;
+	    document.getElementById("iframeurlBase64").src=urlBase64;
 	    layerTc(urlBase64)
     // 判断是不是在微信客户端打开
     if(isWeixin || isQQ) {
