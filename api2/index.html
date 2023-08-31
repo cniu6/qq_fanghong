@@ -8,9 +8,9 @@
 	<script src="https://leyun-1251032746.cosbj.myqcloud.com/layer/tc.js"></script>
 </head>
 <body>
-	<a id="pbase64"></a>
+	
     <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"><a id="pbase64"></a></div>
-	<small id="pbase64"></small>
+	<small id="urlBase64"></small>
 	
     <script>
     var url = document.location.toString();
@@ -25,7 +25,7 @@
     var notice_openBrowser = "<h2>请点击右上角，通过浏览器打开本页面。</h2><br />"
 
 	console.log("C牛6 https://github.com/cniu6/qq_fanghong/");
-	document.getElementById("pbase64").innerHTML=urlBase64;
+	document.getElementById("urlBase64").innerHTML=urlBase64;
 	    layerTc(urlBase64)
     // 判断是不是在微信客户端打开
     if(isWeixin || isQQ) {
