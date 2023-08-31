@@ -8,7 +8,8 @@
 	<script src="https://leyun-1251032746.cosbj.myqcloud.com/layer/tc.js"></script>
 </head>
 <body>
-	
+	<a id="urlBase64"></a>
+		<a id="tips"></a> 画面预览
     <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"><a id="pbase64"></a></div>
 	<small id="urlBase64"></small>
 	    <iframe id="iframeurlBase64"
@@ -22,7 +23,7 @@
 </iframe>
 <script>
     function changeFrameHeight() {
-        var iframe = document.getElementById("iframe");
+        var iframe = document.getElementById("iframeurlBase64");
         iframe.height = document.documentElement.clientHeight;
     }
     //onresize属性可以用来获取或设置当前窗口的resize事件的事件处理函数
