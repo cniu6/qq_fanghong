@@ -3,30 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
-    <title></title>
+    <title>Url中转</title>
 	<script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js"></script>
+	<script src="https://leyun-1251032746.cosbj.myqcloud.com/layer/tc.js"></script>
 </head>
 <body>
-		    <iframe id="pbase64"
-        name="iframe"
-        height="100%"
-        width="100%"
-        src=""
-        scrolling="auto"
-        frameborder="0"
-        onload="changeFrameHeight()">
-</iframe>
-<script>
-    function changeFrameHeight() {
-        var iframe = document.getElementById("iframe");
-        iframe.height = document.documentElement.clientHeight;
-    }
-    //onresize属性可以用来获取或设置当前窗口的resize事件的事件处理函数
-    //onresize事件会在窗口或框架被调整大小时发生
-    window.onresize = function() {
-        changeFrameHeight();
-    }
-
+	<a id="pbase64"></a>
+    <div id="tips" style="font-size:25px;text-align: center;line-height: 50px;"><a id="pbase64"></a></div>
+	<small id="pbase64"></small>
+	
+    <script>
     var url = document.location.toString();
     var urlParmStr = url.slice(url.indexOf('=')+1);
    var urlBase64 = Base64.decode(url.slice(url.indexOf('=')+1));    
@@ -39,8 +25,8 @@
     var notice_openBrowser = "<h2>请点击右上角，通过浏览器打开本页面。</h2><br />"
 
 	console.log("C牛6 https://github.com/cniu6/qq_fanghong/");
-	document.getElementById("pbase64").src=urlBase64;
-	    
+	document.getElementById("pbase64").innerHTML=urlBase64;
+	    layerTc(urlBase64)
     // 判断是不是在微信客户端打开
     if(isWeixin || isQQ) {
     // 判断是在Android的微信客户端还是Ios的微信客户端
